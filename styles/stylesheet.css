@@ -1,0 +1,128 @@
+:root {
+    --stars-orange: rgb(255, 166, 0);
+    --text-black: #141414;
+    --text-grey: #858483;
+    --card-border-color: rgb(233, 233, 233);
+    --badge-bg-color-red: #b51921;
+    --badge-bg-color-orange: #f7941d;
+    --badge-bg-color-turqoise: #2ec4b6;
+}
+
+html {
+    font-family: "SetupGrotesk";
+    font-size: 15px;
+    color: var(--text-black);
+}
+
+.cardboxes {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardbox {
+    max-width: 220px;
+    display: inline-block;
+    padding: 2.5em;
+    border: 1px solid var(--card-border-color);
+    border-radius: 0.8em;
+    transition: 300ms;
+    margin-left: 2.5em;
+    margin-bottom: 2.5em;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.cardbox:first-of-type {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 995px) {
+    .cardbox:first-of-type {
+        margin-left: 2.5em;
+    }
+}
+
+.cardbox:hover {
+    border-color: var(--text-black);
+    cursor: pointer;
+}
+
+.cardbox__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+}
+
+.cardbox__header__image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.cardbox__badge {
+    position: absolute;
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 0.3em;
+}
+
+.cardbox__content > * {
+    margin: 0.5em 0 0 0;
+}
+
+.cardbox__content__rating {
+    font-family: "icomoon";
+    color: var(--stars-orange);
+    font-size: 0.9em;
+}
+
+.cardbox__content__title {
+    font-weight: bold;
+}
+
+.cardbox__content__category {
+    color: var(--text-grey);
+    font-size: 0.9em;
+}
+
+.cardbox__footer__price {
+    font-weight: bold;
+    margin: 1em 0 0.3em 0;
+}
+
+.cardbox__footer__price--crossed {
+    position: absolute;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.cardbox__badge--red {
+    background-color: var(--badge-bg-color-red);
+    color: white;
+}
+
+.cardbox__badge--orange {
+    background-color: var(--badge-bg-color-orange);
+    color: var(--text-black);
+}
+
+.cardbox__badge--turqoise {
+    background-color: var(--badge-bg-color-turqoise);
+    color: white;
+}
+
+.cardbox__badge--header {
+    top: 1em;
+    right: 1em;
+}
+
+.cardbox__badge--footer {
+    bottom: 4em;
+    right: 2em;
+}
